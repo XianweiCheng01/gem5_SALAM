@@ -1,3 +1,8 @@
+
+After the gem5_SALAM has been successfully build, using the following command to test the system with multi-applications and multi-accelerators. Modify the configs/SALAM/sys_validation.py to change the number of applications (number of applications should equal to "-n" )
+
+$M5_PATH/build/ARM/gem5.opt --outdir=BM_ARM_OUT/sys_validation/tmp configs/SALAM/sys_validation.py --mem-size=8GB --mem-channels=1 --kernel=$M5_PATH/benchmarks/sys_validation/nw/sw/main.elf --disk-image=$M5_PATH/baremetal/common/fake.iso --machine-type=VExpress_GEM5_V1 --dtb-file=none --bare-metal --cpu-type=DerivO3CPU -n 8 --accpath=$M5_PATH/benchmarks/sys_validation --accbench=stencil3d --caches --l2cache --acc_cache
+
 # gem5-SALAM #
 
 gem5-SALAM (System Architecture for LLVM-based Accelerator Modeling), is a novel system architecture designed to enable LLVM-based modeling and simulation of custom hardware accelerators.
